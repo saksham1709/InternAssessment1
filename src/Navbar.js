@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="nav">
-                <img src="../public/images/logo.png" alt="img" />
+                <img src="./images/logo.png" alt="img" />
                 <ul className={click ? 'list active' : 'list'}>
                     <li className="links"><Link to="/">Integration</Link></li>
                     <li className="links"><Link to="/">Pricing</Link></li>

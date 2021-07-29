@@ -14,7 +14,7 @@ const Hero = () => {
                 <i class="fab fa-reddit-alien"></i></p>
             </div>
             <div className="hero-img">
-                <img src="../public/images/img.png"/>
+                <img src="./images/img.png"/>
             </div>
         </div>
      );
