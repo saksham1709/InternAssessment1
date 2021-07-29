@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+}
+.navbar{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 20px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+    display: flex;
+    align-items: center;
+}
+.nav-toggle{
+    position: relative;
+    right: 0;
+    top: 30%;
+    color: #2038d3;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    transition: color .3s linear;
+}
+.nav-toggle:hover{
+    color: #707ec5;
+}
+.list{
+    list-style: none;
+    display: flex;
+}
+.links{
+    padding: 0px 20px;
+}
+.links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    transition: all .3s linear;
+}
+.links a:hover{
+    color: #707ec5;
+}
+.list .link-button{
+    width: 100%;
+    border: 1px solid white;
+    padding: 18px 0px 18px 0px;
+    text-decoration: none;
+}
+.list .list-button{
+    display: none;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.list .link-button{
+    transition:  background-color .4s , color .4s , border .4s;
+}
+.cta{
+    text-decoration: none;
+    color: #2038d3;
+    font-size: 1.2rem;
+    border: 1px solid #2038d3;
+    padding: 12px 15px;
+    border-radius: 30px;
+    transition: all .3s linear;
+    animation: glowing 1300ms infinite;
+}
+.cta:hover{
+    background: #2038d3;
+    color: white;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 1px 1px #2038d3;
+    }
+    50% {
+        box-shadow: 0 0 1px 0 #2038d3;
+    }
+    100% {
+        box-shadow: 0 0 1px 1px #2038d3;
+    }
+}
+
+
+@media screen and (max-width:886px) {
+    .nav-toggle{
+        display: block;
+    }
+    .list{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: -200vw;
+        background-color: #2038d3;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .5s;
+    }
+    .list.active{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0vw;
+        background-color: #2038d3;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li a{
+        color: white;
+    }
+    .list li a:hover{
+        color: #707ec5;
+    }
+    .list .link-button:hover{
+        background-color: #7971ea;
+        border: none;
+        color: white;
+    }
+    .list .list-button{
+        display: contents;
+    }
+    .cta{
+        display: none;
+    }
+}
+@media screen and (max-width:575px){
+    .navbar{
+       margin:0;
+    }
+}
